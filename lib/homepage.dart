@@ -1,3 +1,5 @@
+import 'dart:isolate';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
@@ -15,28 +17,30 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "Isolates",
+          "isolates",
           style: TextStyle(
-            color: Colors.white,
+            color: Colors.black,
             fontWeight: .bold,
             fontSize: 26,
           ),
         ),
-        backgroundColor: Colors.deepPurpleAccent,
       ),
-      backgroundColor: Colors.deepPurpleAccent,
+
       body: Center(
         child: Column(
           mainAxisAlignment: .center,
           spacing: 5,
           children: [
             Lottie.asset('asset/gifs/loading.json'),
+            //Without Isolate
             ElevatedButton(onPressed: () {}, child: Text('Task 1')),
+            //Isolate
             ElevatedButton(onPressed: () {}, child: Text('Task 2')),
-            ElevatedButton(onPressed: () {}, child: Text('Task 3')),
           ],
         ),
       ),
     );
   }
 }
+
+//-------End of Home Page--------
