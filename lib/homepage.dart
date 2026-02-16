@@ -33,9 +33,11 @@ class _HomePageState extends State<HomePage> {
           children: [
             Lottie.asset('asset/gifs/loading.json'),
             //Without Isolate
-            ElevatedButton(onPressed: () {}, child: Text('Task 1')),
+            ElevatedButton(onPressed: () {}, child: Text('Normal')),
+            //Compute
+            ElevatedButton(onPressed: () {}, child: Text('Compute')),
             //Isolate
-            ElevatedButton(onPressed: () {}, child: Text('Task 2')),
+            ElevatedButton(onPressed: () {}, child: Text('Isolate')),
           ],
         ),
       ),
